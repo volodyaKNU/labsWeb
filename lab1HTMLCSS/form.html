@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="./index.html">Назад</a>
+
+    <h2>Форма реєстрації студента</h2>
+
+    <form>
+      <fieldset>
+        <legend>Основні дані</legend>
+
+        <label for="pib">ПІБ:</label><br />
+        <input type="text" name="pib" required /><br /><br />
+
+        <label for="group">Група:</label><br />
+        <select id="group" name="group">
+          <option value="ІТ-101">ІТ-101</option>
+          <option value="ІТ-102">ІТ-102</option>
+          <option value="ІТ-103">ІТ-103</option></select
+        ><br /><br />
+
+        <input type="radio" id="budget" name="form" value="budget" checked />
+        <label for="budget">Бюджет</label><br />
+        <input type="radio" id="contract" name="form" value="contract" />
+        <label for="contract">Контракт</label><br /><br />
+        <input type="radio" id="contract" name="form" value="contract1" />
+        <label for="contract1">SOme</label><br /><br />
+
+        <label for="info">Коротка інформація про студента:</label><br />
+        <textarea id="info" name="info" rows="4" cols="40"></textarea
+        ><br /><br />
+
+        <label for="email">Електронна адреса:</label><br />
+        <input type="email" id="email" name="email" /><br /><br />
+        <input type="date" id="email" name="email" required /><br /><br />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Особисті дані</legend>
+
+        <label for="passport">Паспортні дані:</label><br />
+        <input type="text" id="passport" name="passport" required /><br /><br />
+
+        <label for="idcode">Ідентифікаційний код:</label><br />
+        <input type="text" id="idcode" name="idcode" required /><br /><br />
+
+        <label for="year">Рік народження:</label><br />
+        <input
+          type="number"
+          id="year"
+          name="year"
+          min="1900"
+          max="2025"
+          required
+        /><br /><br />
+
+        <label>Стать:</label><br />
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Чоловіча</label><br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Жіноча</label><br />
+      </fieldset>
+
+      <br />
+
+      <input type="submit" value="Зареєструвати" />
+
+      <input type="reset" value="Очистити" />
+    </form>
+  </body>
+</html>

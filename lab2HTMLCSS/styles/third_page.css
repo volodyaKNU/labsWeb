@@ -1,0 +1,4 @@
+.image {
+  background-image: url("../img/mushwoom.png");
+  object-fit: cover !important;
+}
