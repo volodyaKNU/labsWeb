@@ -6,12 +6,6 @@ a {
   color: brown;
 }
 
-.main_page {
-}
-
-#pig {
-}
-
 img {
   width: 30%;
 }
@@ -35,10 +29,6 @@ span {
 
 .specialH1Imp {
   color: aquamarine !important;
-}
-
-h1 {
-  font-size: ;
 }
 
 .main_page {
@@ -65,4 +55,8 @@ h1 {
 
 .last_word {
   color: blue !important;
+}
+
+.specialWord {
+  color: #ff0000;
 }
