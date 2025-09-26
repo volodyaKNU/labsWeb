@@ -1,0 +1,220 @@
+:root {
+  --bg: #0f1a2a; /* темна шапка */
+  --panel: #35425c; /* секція */
+  --accent: #d80a72; /* акцент/розділювач */
+  --wash: #dff1f6; /* підвал */
+  --text: #0b1020; /* темний текст */
+  --white: #ffffff;
+  --muted: #6b7280;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Questrial", sans-serif;
+  color: #0f172a;
+  background-color: var(--wash);
+}
+/* Каркас */
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Бокове меню */
+aside {
+  position: sticky;
+  top: 24px;
+  height: calc(100vh - 68px);
+  border-radius: var(--radius);
+  background: #0f1a2ad9;
+  backdrop-filter: saturate(120%) blur(4px);
+  color: var(--wash);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1f2a44, #35425c);
+  display: grid;
+  place-items: center;
+  color: #cbd5e1;
+  font-weight: 700;
+}
+.brand h1 {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+}
+nav a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+nav a:hover {
+  background: #1b263d;
+}
+nav a.active {
+  border-color: #7dd3fc;
+  background: #112037;
+}
+.menu-title {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #93c5fd;
+  text-transform: uppercase;
+  margin: 10px 12px;
+}
+.divider {
+  height: 1px;
+  background: #2b3854;
+  margin: 12px 0;
+}
+
+/* Контентні секції */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+section {
+  background: #ffffff;
+  border: 1px solid #eef1f6;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.section-head {
+  background: linear-gradient(180deg, #0f1a2a 0, #1a2740 100%);
+  color: var(--wash);
+  padding: 22px 22px 18px;
+  border-bottom: 4px solid var(--accent);
+}
+.section-head h2 {
+  margin: 0;
+  font-size: 22px;
+}
+.section-body {
+  padding: 22px;
+}
+.muted {
+  color: var(--muted);
+}
+
+/* Біографія */
+.bio {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.avatar {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 14px;
+  background: #e5e7eb;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #475569;
+}
+
+/* Дисципліни */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  border: 1px solid #eef1f6;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+}
+.card h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Розклад */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef1f6;
+  text-align: left;
+}
+th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Досягнення */
+.timeline {
+  position: relative;
+  padding-left: 22px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+.t-item {
+  position: relative;
+  margin: 16px 0;
+}
+
+.t-item h4 {
+  margin: 0 0 4px 0;
+}
+
+footer {
+  margin: 24px 0 8px;
+  color: #213047;
+  background: #dff1f6;
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  border: 1px solid #cde6ef;
+}
